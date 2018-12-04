@@ -1,1 +1,1 @@
-# OpenCollaborationPlatform
+# Open Collaboration Platform
