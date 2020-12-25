@@ -1,0 +1,8 @@
+shortName: true
+
+replicaCount: 1
+
+image:
+  tag: latest
+
+containerRegisterName: abbyyplatform.azurecr.io

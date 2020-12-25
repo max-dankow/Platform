@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "common.fullname" . }}-sender
+  labels:
+    app.kubernetes.io/component: sender
+    {{- include "common.labels" . | nindent 4 }}
+    abbyy.platform.metrics.text.endpoint: "1"
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+      name: http
+  selector:
+    app.kubernetes.io/component: sender
+    {{- include "common.selectorLabels" . | nindent 4 }}
