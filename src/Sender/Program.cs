@@ -9,7 +9,7 @@ class Sender
     {
         var factory = new ConnectionFactory
         {
-            HostName = "r1-r-rabbitmq.exp",
+            HostName = "stateful-rabbitmq.demo",
             UserName = "user",
             Password = "password"
         };
