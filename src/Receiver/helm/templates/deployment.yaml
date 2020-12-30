@@ -26,8 +26,8 @@ spec:
       {{- include "common.dnsConfig" . | nindent 6 }}
       containers:
         - name: main
-          image: "{{ .Values.containerRegisterName }}/receiver:{{ default .Chart.AppVersion .Values.image.tag }}"
-          imagePullPolicy: Always
+          image: {{ .Values.image }}
+          imagePullPolicy: {{ .Values.imageConfig.pullPolicy }}
           command: ["dotnet"]
           args: ["Receiver.dll", "run"]
           ports:

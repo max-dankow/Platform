@@ -2,7 +2,10 @@ shortName: true
 
 replicaCount: 1
 
-image:
-  tag: latest
+image: abbyyplatform.azurecr.io/receiver
 
-containerRegisterName: abbyyplatform.azurecr.io
+imageConfig:
+  pullPolicy: IfNotPresent
+
+somePrivateValues: {{ .Application.platform.sender.someValue }}
+appId: {{ .Application.appId }}
