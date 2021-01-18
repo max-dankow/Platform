@@ -1,0 +1,11 @@
+shortName: true
+
+replicaCount: 1
+
+image: abbyyplatform.azurecr.io/windows-sender
+
+imageConfig:
+  pullPolicy: IfNotPresent
+
+somePrivateValues: {{ .Application.platform.receiver.someValue }}
+appId: {{ .Application.appId }}
